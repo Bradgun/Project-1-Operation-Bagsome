@@ -50,4 +50,11 @@ public interface BagInterface<T>
 		 @return  A newly allocated array of all the entries in the bag.
                 Note: If the bag is empty, the returned array is empty. */
 	public T[] toArray();
+
+	/*  a new collection of the entries that would be left in one collection after removing those that also occur in the second 
+	 * the difference does not affect the contents of bag1 or bag2
+	 * difference of two bags may contain duplicate items
+	*/
+	public BagInterface<T> difference(BagInterface<T>bag);
+	
 } // end BagInterface
