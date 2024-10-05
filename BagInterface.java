@@ -6,6 +6,10 @@
 */
 public interface BagInterface<T>
 {
+	public BagInterface<T> union(BagInterface<T> bag);
+	/** add comment about union (like taking two bags and returning bag containing elements from both bags blahblah)
+	 will fix later */
+
 	/** Gets the current number of entries in this bag.
 		 @return  The integer number of entries currently in the bag. */
 	public int getCurrentSize();
