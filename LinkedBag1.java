@@ -95,6 +95,20 @@ public final class LinkedBag1<T> implements BagInterface<T>
 	}
 	  //end of union
    
+	//new bag is the overlapping entries using intersection
+	public LinkedBag1<T> intersection(LinkedBag1<T> otherBag) {
+		LinkedBag1<T> resultBag = new LinkedBag1<>();
+		for (int i = 0; i < numberOfEntries; i++) {
+			T item = LinkedBag1[i];
+			if (otherBag.contains(item)) {
+				int frequency = Math.min(getFrequencyOf(item), otherBag.getFrequencyOf(item));
+				for (int i = 0; i < frequency; i++) {
+					resultBag.add(item);
+				}
+			}
+		}
+		return resultBag;
+	}
 // STUBS:
 
 	/** Removes one unspecified entry from this bag, if possible.

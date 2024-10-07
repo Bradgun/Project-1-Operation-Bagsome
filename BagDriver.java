@@ -41,7 +41,7 @@ public class BagDriver {
         testObj1.testNull();
 
         /*  
-         *Prints out the array difference between the ArrayBag and ArrauBag2 contents
+         *Prints out the array difference between the ArrayBag and ArrayBag2 contents
         */
         System.out.println("\nArrayBag contents:\n");
         for(int i = 0; i < 10; i++) {

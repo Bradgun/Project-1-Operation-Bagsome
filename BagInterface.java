@@ -14,6 +14,8 @@ public interface BagInterface<T>
 
 	public BagInterface<T> union(BagInterface<T> bag);
 
+	public BagInterface<T> intersection(BagInterface<T> bag);
+
 
 	/** Gets the current number of entries in this bag.
 		 @return  The integer number of entries currently in the bag. */
