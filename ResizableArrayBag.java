@@ -64,6 +64,56 @@ public final class ResizableArrayBag<T> implements BagInterface<T>
          } //end of union
 
 
+        @Override
+         public BagInterface<T> intersection(BagInterface<T> otherBag) {
+
+            //creates a new bag
+            BagInterface<T> resultBag = new ResizableArrayBag<>();
+      
+            // check to see if either bag is null
+            if ((null == this) || (null == otherBag)) {
+      
+               //return empty bag if so because there will be no intersection
+               System.out.print("Null bag was found...");
+               return resultBag;
+            }
+      
+            //check if both bags are empty
+            if (isEmpty() || otherBag.isEmpty()) {
+      
+               //return empty bag if so because there will be no intersection
+               System.out.print("Both bags were empty");
+               return resultBag;
+            }
+      
+            //if neither, return the two linked bag with the intersection
+            T[] arrayBag = this.toArray();
+            T[] arrayBag2 = otherBag.toArray();
+      
+            //loops through first bag
+            for (int i = 0; i < arrayBag.length; i++) {
+               //placeholder for value in array to compare
+               T firstValue = arrayBag[i];
+               //loops through second bag
+               for (int j = 0; j < arrayBag2.length; j++) {
+                  
+                  //placeholder for value in second array to compare
+                  T secondValue = arrayBag2[j];
+                  
+                  //compares values between first and second bag
+                  if (firstValue.equals(secondValue)) {
+                     
+                     resultBag.add(firstValue);
+      
+                     arrayBag[i] = null;
+                     arrayBag2[j] = null;
+                  }
+               }
+            }
+            return resultBag;
+         }
+         //end of intersection
+
 	/** Adds a new entry to this bag.
        @param newEntry  The object to be added as a new entry.
        @return  True. */
