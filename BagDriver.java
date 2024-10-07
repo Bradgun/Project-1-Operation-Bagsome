@@ -1,3 +1,7 @@
+
+
+
+
 public class BagDriver {
     
     public static void main(String[] args) {
@@ -90,6 +94,18 @@ public class BagDriver {
         for (int i = 0; i < linkUnionBag.getCurrentSize(); i++) {
             System.out.println(linkUnionBag.toArray()[i]);
         }
-        }
+        /*
+         * Intersection of the two arrayBags
+         */
+        BagInterface<Integer> arrayBagIntersect = arrayBag.intersection(arrayBag2);
+        System.out.println("The intersection of the two array bags are:");
+        System.out.println(arrayBagIntersect);
 
+        /*
+         * Intersection of the two linkedBags
+         */
+        BagInterface<Integer> linkedBagIntersect = linkBag.intersection(linkBag2);
+        System.out.println("The intersection of the two linked bags are:");
+        System.out.println(linkedBagIntersect);
+        }
 	}
