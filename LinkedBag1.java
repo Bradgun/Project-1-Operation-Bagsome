@@ -67,6 +67,33 @@ public final class LinkedBag1<T> implements BagInterface<T>
 	{
 		return numberOfEntries;
 	} // end getCurrentSize
+
+	/** Creates a new bag.
+	 * The new bag is the union of the two bags
+	@param anotherBag  the other bag is combined with this bag
+       @return  A new bag that is the union of the two bags
+	 */
+	public LinkedBag1<T> union(BagInterface<T> otherBag) {
+		LinkedBag1<T> resultBag = new LinkedBag1<>();
+	
+	 /** All characters from this bag */
+	  Node current = this.firstNode; 
+	  while(current != null) {
+		resultBag.add(current.data);
+		current = current.next;
+	  }
+
+	  /** All characters from anotherBag */
+	  if (otherBag != null) {
+		T[] otherArray = otherBag.toArray();
+		for (T entry : otherArray) {
+			resultBag.add(entry);
+			}
+		}
+	  return resultBag;
+
+	}
+	  //end of union
    
 // STUBS:
 

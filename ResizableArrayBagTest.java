@@ -1,13 +1,13 @@
-public class ResizableArrayBagTest {
+public class ResizableArrayBagTest<T> {
 
  	/* creates ArrayBag and ArrayBag2 object */
-    ResizableArrayBag arrayBag = new ResizableArrayBag();
-    ResizableArrayBag arrayBag2 = new ResizableArrayBag();
+    ResizableArrayBag<T> arrayBag = new ResizableArrayBag<>();
+    ResizableArrayBag<T> arrayBag2 = new ResizableArrayBag<>();
     
 	 /* contructors for ArrayBags 
 	  * parameters: two objects of ResizableArrayBag type
 	 */
-	public ResizableArrayBagTest (ResizableArrayBag arrayBag, ResizableArrayBag arrayBag2) {
+	public ResizableArrayBagTest (ResizableArrayBag<T> arrayBag, ResizableArrayBag<T> arrayBag2) {
     	
     	this.arrayBag = arrayBag;
     	this.arrayBag2 = arrayBag2;
@@ -29,11 +29,11 @@ public class ResizableArrayBagTest {
 
 	/* returns a new bag containing the difference of two array bags */
  
-	public ResizableArrayBag testDifferenceArray() {
+	public ResizableArrayBag<T> testDifferenceArray() {
 		Object[] bagArray = arrayBag.toArray();
 		Object[] bagArray2 = arrayBag2.toArray();
 
-		ResizableArrayBag returnBag = new ResizableArrayBag<>();
+		ResizableArrayBag<T> returnBag = new ResizableArrayBag<>();
  
 		System.out.println("\nArray Difference:\n");
  
@@ -47,6 +47,31 @@ public class ResizableArrayBagTest {
 	 }
 		returnBag = arrayBag;
 		return returnBag;
-	}		
-}
+	}
+	/**
+	 * Returns new bag containing all elements of arrayBag and arrayBag2 
+	 */	
+	public ResizableArrayBag<T> testUnion() {
+		ResizableArrayBag<T> unionBag = new ResizableArrayBag<>();
+
+		System.out.println("\nArray Union:");
+
+		//adding elements from arrayBag
+		for (T element : arrayBag.toArray()) {
+			unionBag.add(element);
+		}
+
+		//adding elements from arrayBag2
+		for (T element : arrayBag2.toArray()) {
+			unionBag.add(element);
+		}
+		
+		//Print elements in unionBag
+		for (T element : unionBag.toArray()) {
+			System.out.println(element);
+		}
+		return unionBag; //end of union
+		}
+	}
+
 

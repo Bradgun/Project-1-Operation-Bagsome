@@ -1,22 +1,23 @@
 public class BagDriver {
+    
     public static void main(String[] args) {
 
         /*  
          * creates bag objects of resizable array
         */
-        ResizableArrayBag arrayBag = new ResizableArrayBag();
-        ResizableArrayBag arrayBag2 = new ResizableArrayBag();
+        ResizableArrayBag<Integer> arrayBag = new ResizableArrayBag<>();
+        ResizableArrayBag<Integer> arrayBag2 = new ResizableArrayBag<>();
 
         /*  
          * creates bag objects of linked list
         */
-        LinkedBag1 linkBag = new LinkedBag1();
-        LinkedBag1 linkBag2 = new LinkedBag1();
+        LinkedBag1<Integer> linkBag = new LinkedBag1<>();
+        LinkedBag1<Integer> linkBag2 = new LinkedBag1<>();
 
         /*  
          * creates testing objects for difference of resizable and link list test classes
         */
-        ResizableArrayBagTest testObj = new ResizableArrayBagTest(arrayBag, arrayBag2);
+        ResizableArrayBagTest<Integer> testObj = new ResizableArrayBagTest<>(arrayBag, arrayBag2);
         LinkedBagTest testObj1 = new LinkedBagTest(linkBag, linkBag2);
 	
 
@@ -71,5 +72,23 @@ public class BagDriver {
          /* prints out different in LinkBag */
         testObj1.testDifferenceLink();
 
+        /*
+         * Union of the two arrayBags
+         */
+        BagInterface<Integer> arrayUnionBag = arrayBag.union(arrayBag2);
+        System.out.println("\nUnion of arrayBag and arrayBag2:");
+        for (int i = 0; i < arrayUnionBag.getCurrentSize(); i++) {
+            System.out.println(arrayUnionBag.toArray()[i]);
+        }
+
+        /*
+         * Union of the two linkBags
+         */
+        BagInterface<Integer> linkUnionBag = linkBag.union(linkBag2);
+        System.out.println("\nUnion of linkBag and linkBag2:");
+        for (int i = 0; i < linkUnionBag.getCurrentSize(); i++) {
+            System.out.println(linkUnionBag.toArray()[i]);
+        }
+        }
+
 	}
-}
