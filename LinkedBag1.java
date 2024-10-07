@@ -218,6 +218,11 @@ public final class LinkedBag1<T> implements BagInterface<T>
       return false;
    } // end contains
 
+    @Override
+    public BagInterface<T> difference(BagInterface<T> bag) {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
 	private class Node
 	{
 	  private T    data; // Entry in bag

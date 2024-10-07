@@ -293,6 +293,11 @@ public final class ResizableArrayBag<T> implements BagInterface<T>
       if (!integrityOK)
          throw new SecurityException ("ArrayBag object is corrupt.");
    } // end checkintegrity
+
+    @Override
+    public BagInterface<T> difference(BagInterface<T> bag) {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
 } // end ResizableArrayBag
 
 /*

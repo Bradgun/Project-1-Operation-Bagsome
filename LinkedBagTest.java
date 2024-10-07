@@ -7,15 +7,11 @@ public class LinkedBagTest {
 	 /* contructors for LinkedBags 
 	  * parameters: two objects of LinkedBag type
 	 */
-	public LinkedBagTest(LinkedBag1<Integer> linkBag3, LinkedBag1<Integer> linkBag22) {
+	public LinkedBagTest(LinkedBag1<Object> linkBag, LinkedBag1<Object> linkBag2) {
     	
-    	this.linkBag = linkBag3;
-    	this.linkBag2 = linkBag22;
+    	this.linkBag = linkBag;
+    	this.linkBag2 = linkBag2;
     	
-    }
-
-	 public LinkedBagTest(LinkedBag1<Integer> linkBag3, LinkedBag1<Integer> linkBag22) {
-        //TODO Auto-generated constructor stub
     }
 
 /* method checks if bags are null */
