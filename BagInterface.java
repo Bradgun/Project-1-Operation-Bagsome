@@ -62,6 +62,6 @@ public interface BagInterface<T>
 	 * the difference does not affect the contents of bag1 or bag2
 	 * difference of two bags may contain duplicate items
 	*/
-	public BagInterface<T> difference(BagInterface<T>bag);
+	public BagInterface<T> difference(BagInterface<T> bag);
 	
 } // end BagInterface

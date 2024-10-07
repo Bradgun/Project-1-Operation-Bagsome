@@ -69,4 +69,17 @@ public class LinkedBagTest {
 	}
 	return unionBag;
    }
+
+   /*Returns new bag (intersectionBag) that is the intersection of linkBag and linkBag2 */
+   public LinkedBag1<Object> testIntersection() {
+	LinkedBag1<Object> intersectionBag = (LinkedBag1<Object>) linkBag.intersection(linkBag2);
+	
+	Object[] intersectionArray = intersectionBag.toArray();
+	
+	//print all elements in the intersection
+	for (Object element: intersectionArray) {
+		System.out.println(element);
+	}
+	return intersectionBag;
+   }
 }
