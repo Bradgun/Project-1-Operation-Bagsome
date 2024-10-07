@@ -18,7 +18,7 @@ public class BagDriver {
          * creates testing objects for difference of resizable and link list test classes
         */
         ResizableArrayBagTest<Integer> testObj = new ResizableArrayBagTest<>(arrayBag, arrayBag2);
-        LinkedBagTest testObj1 = new LinkedBagTest(linkBag, linkBag2);
+        LinkedBagTest<Integer> testObj1 = new LinkedBagTest<>(linkBag, linkBag2);
 	
 
         /*  
@@ -72,23 +72,19 @@ public class BagDriver {
          /* prints out different in LinkBag */
         testObj1.testDifferenceLink();
 
-        /*
-         * Union of the two arrayBags
-         */
+
+        // Union of arrayBags
         BagInterface<Integer> arrayUnionBag = arrayBag.union(arrayBag2);
         System.out.println("\nUnion of arrayBag and arrayBag2:");
-        for (int i = 0; i < arrayUnionBag.getCurrentSize(); i++) {
-            System.out.println(arrayUnionBag.toArray()[i]);
+        for (Object elem : arrayUnionBag.toArray()) {
+            System.out.println((Integer) elem);  // Cast each element individually
         }
 
-        /*
-         * Union of the two linkBags
-         */
+        // Union of linkBags
         BagInterface<Integer> linkUnionBag = linkBag.union(linkBag2);
         System.out.println("\nUnion of linkBag and linkBag2:");
-        for (int i = 0; i < linkUnionBag.getCurrentSize(); i++) {
-            System.out.println(linkUnionBag.toArray()[i]);
+        for (Object elem : linkUnionBag.toArray()) {
+            System.out.println((Integer) elem);  // Cast each element individually
         }
-        }
-
-	}
+    }
+}

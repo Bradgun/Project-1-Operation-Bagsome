@@ -1,17 +1,17 @@
 public class LinkedBagTest <T> {
 
     /* creates LinkedBag and LinkedBag2 object */
-    LinkedBag1<Object> linkBag = new LinkedBag1<>();
-    LinkedBag1<Object> linkBag2 = new LinkedBag1<>();
+    private LinkedBag1<T> linkBag;
+    private LinkedBag1<T> linkBag2;
     
 	 /* contructors for LinkedBags 
 	  * parameters: two objects of LinkedBag type
 	 */
-	@SuppressWarnings("unchecked")
+	
 	public LinkedBagTest(LinkedBag1<T> linkBag3, LinkedBag1<T> linkBag22) {
     	
-    	this.linkBag = (LinkedBag1<Object>) linkBag3;
-    	this.linkBag2 = (LinkedBag1<Object>) linkBag22;
+    	this.linkBag = linkBag3;
+    	this.linkBag2 = linkBag22;
     	
     }
 
@@ -31,11 +31,12 @@ public class LinkedBagTest <T> {
 
 	/* returns a new bag containing the difference of two link bags */
 
-   public LinkedBag1<Object> testDifferenceLink() {
+   public LinkedBag1<T> testDifferenceLink() {
     Object[] bagArray = linkBag.toArray();
+	@SuppressWarnings("unused")
 	Object[] bagArray2 = linkBag2.toArray();
 
-		LinkedBag1<Object> returnBag = new LinkedBag1<>();
+		LinkedBag1<T> returnBag = new LinkedBag1<>();
  
 		System.out.println("\nLink Difference:\n");
  
@@ -53,9 +54,9 @@ public class LinkedBagTest <T> {
    }
 
    /* Returns new bag (unionBag) that is the union of linkBag and linkBag2 */
-   public LinkedBag1<Object> testUnion() {
+   public LinkedBag1<T> testUnion() {
 	//Union of two bags
-	LinkedBag1<Object> unionBag = linkBag.union(linkBag2);
+	LinkedBag1<T> unionBag = linkBag.union(linkBag2);
 
 	System.out.println("\nLink Union:");
 

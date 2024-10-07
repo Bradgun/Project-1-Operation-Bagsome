@@ -31,6 +31,7 @@ public class ResizableArrayBagTest<T> {
  
 	public ResizableArrayBag<T> testDifferenceArray() {
 		Object[] bagArray = arrayBag.toArray();
+		@SuppressWarnings("unused")
 		Object[] bagArray2 = arrayBag2.toArray();
 
 		ResizableArrayBag<T> returnBag = new ResizableArrayBag<>();
