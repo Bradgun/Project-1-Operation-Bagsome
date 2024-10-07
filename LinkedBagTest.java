@@ -1,4 +1,4 @@
-public class LinkedBagTest {
+public class LinkedBagTest <T> {
 
     /* creates LinkedBag and LinkedBag2 object */
     LinkedBag1<Object> linkBag = new LinkedBag1<>();
@@ -7,15 +7,12 @@ public class LinkedBagTest {
 	 /* contructors for LinkedBags 
 	  * parameters: two objects of LinkedBag type
 	 */
-	public LinkedBagTest(LinkedBag1<Integer> linkBag3, LinkedBag1<Integer> linkBag22) {
+	@SuppressWarnings("unchecked")
+	public LinkedBagTest(LinkedBag1<T> linkBag3, LinkedBag1<T> linkBag22) {
     	
-    	this.linkBag = linkBag3;
-    	this.linkBag2 = linkBag22;
+    	this.linkBag = (LinkedBag1<Object>) linkBag3;
+    	this.linkBag2 = (LinkedBag1<Object>) linkBag22;
     	
-    }
-
-	 public LinkedBagTest(LinkedBag1<Integer> linkBag3, LinkedBag1<Integer> linkBag22) {
-        //TODO Auto-generated constructor stub
     }
 
 /* method checks if bags are null */
