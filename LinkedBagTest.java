@@ -66,16 +66,69 @@ public class LinkedBagTest {
 	return unionBag;
    }
 
-   /*Returns new bag (intersectionBag) that is the intersection of linkBag and linkBag2 */
-   public LinkedBag1<Object> testIntersection() {
-	LinkedBag1<Object> intersectionBag = (LinkedBag1<Object>) linkBag.intersection(linkBag2);
+   	//new bag is the overlapping entries using 
 	
-	Object[] intersectionArray = intersectionBag.toArray();
 	
-	//print all elements in the intersection
-	for (Object element: intersectionArray) {
-		System.out.println(element);
+	   
+	   public LinkedBag1<Object> intersection(LinkedBag1<Object> otherBag) {
+   
+		   //creates a new bag
+		   LinkedBag1<Object> resultBag = new LinkedBag1<>();
+   
+		   // check to see if either bag is null
+		   if ((null == this) || (null == otherBag)) {
+   
+			   //return empty bag if so because there will be no intersection
+			   System.out.print("Null bag was found...");
+			   return resultBag;
+		   }
+   
+		   //check if both bags are empty
+		   if (isEmpty() || otherBag.isEmpty()) {
+   
+			   //return empty bag if so because there will be no intersection
+			   System.out.print("Both bags were empty");
+			   return resultBag;
+		   }
+   
+		   //if neither, return the two linked bag with the intersection
+		   Object[] arrayBag = this.toArray();
+		   Object[] arrayBag2 = otherBag.toArray();
+   
+		   //loops through first bag
+		   for (int i = 0; i < arrayBag.length; i++) {
+			   //placeholder for value in array to compare
+			   Object firstValue = arrayBag[i];
+			   //loops through second bag
+			   for (int j = 0; j < arrayBag2.length; j++) {
+				   
+				   //placeholder for value in second array to compare
+				   Object secondValue = arrayBag2[j];
+				   
+				   //compares values between first and second bag
+				   if (firstValue.equals(secondValue)) {
+					   
+					   resultBag.add(firstValue);
+   
+					   arrayBag[i] = null;
+					   arrayBag2[j] = null;
+				   }
+			   }
+		   }
+		   return resultBag;
+	   }
+	   //end of intersection
+
+
+	private Object[] toArray() {
+		// TODO Auto-generated method stub
+		throw new UnsupportedOperationException("Unimplemented method 'toArray'");
 	}
-	return intersectionBag;
-   }
+
+
+	private boolean isEmpty() {
+		// TODO Auto-generated method stub
+		throw new UnsupportedOperationException("Unimplemented method 'isEmpty'");
+	}
+
 }
