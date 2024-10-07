@@ -6,9 +6,14 @@
 */
 public interface BagInterface<T>
 {
+	/** This method combines elements from two bags into a new bag.
+	 * This returns a new bag with the combined elements.
+	 * This does not change the elements of the original two bags.
+	 * @return A new bag that is the union of all elements from the two bags.
+	 */
+
 	public BagInterface<T> union(BagInterface<T> bag);
-	/** add comment about union (like taking two bags and returning bag containing elements from both bags blahblah)
-	 will fix later */
+
 
 	/** Gets the current number of entries in this bag.
 		 @return  The integer number of entries currently in the bag. */
@@ -50,4 +55,11 @@ public interface BagInterface<T>
 		 @return  A newly allocated array of all the entries in the bag.
                 Note: If the bag is empty, the returned array is empty. */
 	public T[] toArray();
+
+	/*  a new collection of the entries that would be left in one collection after removing those that also occur in the second 
+	 * the difference does not affect the contents of bag1 or bag2
+	 * difference of two bags may contain duplicate items
+	*/
+	public BagInterface<T> difference(BagInterface<T>bag);
+	
 } // end BagInterface

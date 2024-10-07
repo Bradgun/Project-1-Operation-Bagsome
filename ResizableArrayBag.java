@@ -42,7 +42,28 @@ public final class ResizableArrayBag<T> implements BagInterface<T>
       numberOfEntries = contents.length;
       integrityOK = true;
    } // end constructor
-       
+   
+   /** 
+    * Creates new bag that is the union of the elements of this bag and another bag.
+       @param anotherBag to combine w/ this bag
+       @return A new bag w/ the union of the two bags
+       */
+      public ResizableArrayBag<T> union(BagInterface<T> anotherBag) {
+         ResizableArrayBag<T> result = new ResizableArrayBag<>();
+
+         //add all elements from this bag
+         for (T item : this.toArray()) {
+            result.add(item);
+         }
+
+         //add all elements frrom the anotherBag
+         for (T item: anotherBag.toArray()) {
+               result.add(item);
+            }
+         return result; //returning the union of the two bags
+         } //end of union
+
+
 	/** Adds a new entry to this bag.
        @param newEntry  The object to be added as a new entry.
        @return  True. */

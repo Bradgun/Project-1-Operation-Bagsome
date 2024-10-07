@@ -8,7 +8,7 @@
 */
 public final class LinkedBag1<T> implements BagInterface<T>
 {
-	private Node firstNode;       // Reference to first node
+	private Node firstNode ;       // Reference to first node
 	private int numberOfEntries;
 
 	public LinkedBag1()
@@ -67,6 +67,33 @@ public final class LinkedBag1<T> implements BagInterface<T>
 	{
 		return numberOfEntries;
 	} // end getCurrentSize
+
+	/** Creates a new bag.
+	 * The new bag is the union of the two bags
+	@param anotherBag  the other bag is combined with this bag
+       @return  A new bag that is the union of the two bags
+	 */
+	public LinkedBag1<T> union(BagInterface<T> otherBag) {
+		LinkedBag1<T> resultBag = new LinkedBag1<>();
+	
+	 /** All characters from this bag */
+	  Node current = this.firstNode; 
+	  while(current != null) {
+		resultBag.add(current.data);
+		current = current.next;
+	  }
+
+	  /** All characters from anotherBag */
+	  if (otherBag != null) {
+		T[] otherArray = otherBag.toArray();
+		for (T entry : otherArray) {
+			resultBag.add(entry);
+			}
+		}
+	  return resultBag;
+
+	}
+	  //end of union
    
 // STUBS:
 
@@ -83,6 +110,30 @@ public final class LinkedBag1<T> implements BagInterface<T>
        @return  True if the removal was successful, or false otherwise. */
    public boolean remove(T anEntry)
    {
+	Node current = firstNode;
+        Node previous = null;
+
+        // Check if the firstNode needs to be removed
+        if (current != null && current.getData() == anEntry) {
+            firstNode = current.next; // Move firstNode to next node
+            return true;
+        }
+
+        // Traverse the list to find the node to remove
+        while (current != null && current.getData() != anEntry) {
+            previous = current;
+            current = current.next;
+        }
+
+        // If the anEntry was not found in the list
+        if (current == null) {
+            //System.out.println("Data not found in the list.");
+            return true;
+        }
+
+        // Unlink the node from the list
+        previous.next = current.next;
+    
       return false; // STUB
    } // end remove
 	
@@ -105,7 +156,16 @@ public final class LinkedBag1<T> implements BagInterface<T>
 		 @return  True if the bag contains anEntry, or false otherwise. */
 	public boolean contains(T anEntry)
    {
-      return false; // STUB
+	Node tempNode = firstNode;
+
+	while (tempNode != null) {
+		if(tempNode.getData() == anEntry)
+			return true;
+
+		else
+			tempNode = tempNode.getNextNode();
+	}
+      return false;
    } // end contains
 
 	private class Node
@@ -122,9 +182,21 @@ public final class LinkedBag1<T> implements BagInterface<T>
 		{
 			data = dataPortion;
 			next = nextNode;	
-		} // end constructor
+		} 
+
+		/* returns node data */
+
+		private T getData(){
+
+			return data;
+		}
+
+		/* returns next node */
+		public Node getNextNode() {
+			return next;
 	} // end Node
 } // end LinkedBag1
+}
 
 
 
