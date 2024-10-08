@@ -95,14 +95,15 @@ public class BagDriver {
          * Intersection of the two arrayBags
          */
         BagInterface<Object> arrayBagIntersect = arrayBag.intersection(arrayBag2);
-        System.out.println("The intersection of the two array bags are:");
+        System.out.println("Intersection of arrayBag and arrayBag2:");
         System.out.println(arrayBagIntersect);
+        
 
         /*
          * Intersection of the two linkedBags
          */
         BagInterface<Object> linkedBagIntersect = linkBag.intersection(linkBag2);
-        System.out.println("The intersection of the two linked bags are:");
+        System.out.println("Intersection of linkBag and linkBag2:");
         System.out.println(linkedBagIntersect);
         }
 	}
