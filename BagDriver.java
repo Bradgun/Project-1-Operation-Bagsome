@@ -109,11 +109,13 @@ public class BagDriver {
         private Object[] toArray() {
             // TODO Auto-generated method stub
         throw new UnsupportedOperationException("Unimplemented method 'toArray'");
-        
-    
-    
-       private boolean isEmpty() {
+        }
+        private boolean isEmpty() {
             // TODO Auto-generated method stub
             throw new UnsupportedOperationException("Unimplemented method 'isEmpty'");
         }
-	}
+        
+    
+       
+	
+}
