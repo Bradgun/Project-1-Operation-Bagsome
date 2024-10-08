@@ -139,6 +139,8 @@ public final class LinkedBag1<T> implements BagInterface<T>
 				if (firstValue.equals(secondValue)) {
 					
 					resultBag.add(firstValue);
+					arrayBag[i] = null;
+                    arrayBag2[j] = null;
 
 
 				}
@@ -263,6 +265,9 @@ public final class LinkedBag1<T> implements BagInterface<T>
 	
 	// end Node
 } // end LinkedBag1
+<<<<<<< HEAD
+}
+=======
 
 	public void insert(Object object) {
 		// TODO Auto-generated method stub
@@ -272,3 +277,4 @@ public final class LinkedBag1<T> implements BagInterface<T>
 
 
 
+>>>>>>> 2a1464659b86b36c778c0c9edc8534109dec921f
