@@ -58,6 +58,7 @@ public final class LinkedBag1<T> implements BagInterface<T>
        @return  True if the bag is empty, or false if not. */
 	public boolean isEmpty()
 	{
+
 		return numberOfEntries == 0;
 	} // end isEmpty
    
@@ -231,6 +232,7 @@ public final class LinkedBag1<T> implements BagInterface<T>
 	{
 	  private T    data; // Entry in bag
 	  private Node next; // Link to next node
+	  private T insert;
 
 		private Node(T dataPortion)
 		{
@@ -253,8 +255,21 @@ public final class LinkedBag1<T> implements BagInterface<T>
 		/* returns next node */
 		public Node getNextNode() {
 			return next;
-	} // end Node
+	}
+	public T insertBag(){
+
+		return insert;
+
+	}
+	
+	
+	// end Node
 } // end LinkedBag1
+
+	public void insert(Object object) {
+		// TODO Auto-generated method stub
+		throw new UnsupportedOperationException("Unimplemented method 'insert'");
+	}
 }
 
 
