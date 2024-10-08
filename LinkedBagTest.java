@@ -32,7 +32,7 @@ public class LinkedBagTest {
 
    public LinkedBag1<Object> testDifferenceLink() {
     Object[] bagArray = linkBag.toArray();
-	@SuppressWarnings("unused")
+	//@SuppressWarnings("unused")
 	Object[] bagArray2 = linkBag2.toArray();
 
 		LinkedBag1<Object> returnBag = new LinkedBag1<>();
@@ -75,8 +75,32 @@ public class LinkedBagTest {
    
 		   //creates a new bag
 		   LinkedBag1<Object> resultBag = new LinkedBag1<>();
-   
-		   // check to see if either bag is null
+
+		   
+
+			Object[]bagArray = linkBag.toArray();
+			Object[]bagArray2 = linkBag2.toArray();
+			
+			LinkedBag1<Object> returnBag = new LinkedBag1<>();
+			System.out.println("\nLink Difference: \n");
+			
+			for(int i = 0; i < bagArray.length; i++){
+			if(linkBag.contains(linkBag2.toArray()[i])){
+			linkBag.insert(linkBag2.toArray()[i]);
+                            for (Object toArray : linkBag.toArray()) {
+                                System.out.println(toArray);
+                                returnBag = linkBag;
+                                return returnBag;
+                            }
+		}
+	}
+	returnBag = linkBag;
+			return returnBag;
+}
+}
+
+
+		 /*   // check to see if either bag is null
 		   if ((null == this) || (null == otherBag)) {
    
 			   //return empty bag if so because there will be no intersection
@@ -134,6 +158,10 @@ public class LinkedBagTest {
 	private boolean isEmpty() {
 		// TODO Auto-generated method stub
 		throw new UnsupportedOperationException("Unimplemented method 'isEmpty'");
-	}
+	}*/
 
-}
+
+			
+		
+	
+	   

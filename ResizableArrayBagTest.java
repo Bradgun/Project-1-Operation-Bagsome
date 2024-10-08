@@ -74,69 +74,70 @@ public class ResizableArrayBagTest<T> {
 	   return unionBag; //end of union
 	   }
 
-	   public ResizableArrayBag<Object> intersection(ResizableArrayBag<Object> otherBag) {
-  
-		   //creates a new bag
-		   ResizableArrayBag<Object> resultBag = new ResizableArrayBag<>();
+		public ResizableArrayBag<Object> intersection(ResizableArrayBag<Object> otherBag) {
    
-		   // check to see if either bag is null
-		   if ((null == this) || (null == otherBag)) {
-   
-			   //return empty bag if so because there will be no intersection
-			   System.out.print("Null bag was found...");
-			   return resultBag;
-		   }
-   
-		   //check if both bags are empty
-		   if (isEmpty() || otherBag.isEmpty()) {
-   
-			   //return empty bag if so because there will be no intersection
-			   System.out.print("Both bags were empty");
-			   return resultBag;
-		   }
-   
-		   //if neither, return the two linked bag with the intersection
-		   Object[] arrayBag = this.toArray();
-		   Object[] arrayBag2 = otherBag.toArray();
-   
-		   //loops through first bag
-		   for (int i = 0; i < arrayBag.length; i++) {
-			   //placeholder for value in array to compare
-			   Object firstValue = arrayBag[i];
-			   //check if firstValue isn't null
-		   if (firstValue != null) {
-			   //loops through second bag
-			   for (int j = 0; j < arrayBag2.length; j++) {
-				   
-				   //placeholder for value in second array to compare
-				   Object secondValue = arrayBag2[j];
-				   
-				   //compares values between first and second bag
-				   if (firstValue.equals(secondValue)) {
-					   
-					   resultBag.add(firstValue);
-					   arrayBag[i] = null;
-				   arrayBag2[j] = null;
-					   
-				   }
-			   }
-		   }
-	   }
-		   return resultBag;
-	   }
-	   //end of intersection
-
-
-	private Object[] toArray() {
-		// TODO Auto-generated method stub
-		throw new UnsupportedOperationException("Unimplemented method 'toArray'");
+			//creates a new bag
+			ResizableArrayBag<Object> resultBag = new ResizableArrayBag<>();
+	
+			// check to see if either bag is null
+			if ((null == this) || (null == otherBag)) {
+	
+				//return empty bag if so because there will be no intersection
+				System.out.print("Null bag was found...");
+				return resultBag;
+			}
+	
+			//check if both bags are empty
+			if (isEmpty() || otherBag.isEmpty()) {
+	
+				//return empty bag if so because there will be no intersection
+				System.out.print("Both bags were empty");
+				return resultBag;
+			}
+	
+			//if neither, return the two linked bag with the intersection
+			Object[] arrayBag = this.toArray();
+			Object[] arrayBag2 = otherBag.toArray();
+	
+			//loops through first bag
+			for (int i = 0; i < arrayBag.length; i++) {
+				//placeholder for value in array to compare
+				Object firstValue = arrayBag[i];
+				//check if firstValue isn't null
+			if (firstValue != null) {
+				//loops through second bag
+				for (int j = 0; j < arrayBag2.length; j++) {
+					
+					//placeholder for value in second array to compare
+					Object secondValue = arrayBag2[j];
+					
+					//compares values between first and second bag
+					if (firstValue.equals(secondValue)) {
+						
+						resultBag.add(firstValue);
+	
+						
+					}
+				}
+			}
+		}
+			return resultBag;
+		}
+		//end of intersection
+ 
+ 
+	 private Object[] toArray() {
+		 // TODO Auto-generated method stub
+		 throw new UnsupportedOperationException("Unimplemented method 'toArray'");
+	 }
+ 
+ 
+	 private boolean isEmpty() {
+		 // TODO Auto-generated method stub
+		 throw new UnsupportedOperationException("Unimplemented method 'isEmpty'");
+	 }
+ 
 	}
+	
 
 
-	private boolean isEmpty() {
-		// TODO Auto-generated method stub
-		throw new UnsupportedOperationException("Unimplemented method 'isEmpty'");
-	}
-
-   }
-   

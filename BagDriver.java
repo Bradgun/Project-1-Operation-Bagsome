@@ -105,15 +105,4 @@ public class BagDriver {
         System.out.println("The intersection of the two linked bags are:");
         System.out.println(linkedBagIntersect);
         }
-        
-      /*   private Object[] toArray() {
-            // TODO Auto-generated method stub
-            throw new UnsupportedOperationException("Unimplemented method 'toArray'");
-        }
-    
-    
-        private boolean isEmpty() {
-            // TODO Auto-generated method stub
-            throw new UnsupportedOperationException("Unimplemented method 'isEmpty'");
-        }*/
 	}
