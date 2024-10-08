@@ -264,17 +264,5 @@ public final class LinkedBag1<T> implements BagInterface<T>
 	
 	
 	// end Node
-} // end LinkedBag1
-<<<<<<< HEAD
-}
-=======
-
-	public void insert(Object object) {
-		// TODO Auto-generated method stub
-		throw new UnsupportedOperationException("Unimplemented method 'insert'");
-	}
-}
-
-
-
->>>>>>> 2a1464659b86b36c778c0c9edc8534109dec921f
+} 
+}  // end LinkedBag1
