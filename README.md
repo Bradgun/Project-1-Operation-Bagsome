@@ -18,4 +18,5 @@ GitHub Username: Bradgun
 Role and contribution: Added intersection method to BagInterface, implemented intersection ResizableArrayBag and ResizableArrayBagTest, implemented intersection to LinkedBag1 and LinkedBagTest, filled intersection part of the time complexities table, pieces clips together for the video, submitted project
 
 Link to video: https://youtu.be/eHc-z6y7Sa4
+
 Link to JavaDoc: file:///Users/janell/Documents/GitHub/CS-project/Project-1-Operation-Bagsome/doc/allclasses-index.html
