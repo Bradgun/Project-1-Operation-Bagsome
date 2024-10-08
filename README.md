@@ -12,9 +12,9 @@ CPP email: cballeza@cpp.edu
 GitHub Username: cballeza
 Role and contribution: Added difference method to BagInterface, implemented difference to ResizableArrayBag, ResizableArrayBagTest, implemented difference, contains, node, removeEntry in LinkedBag1 and LinkedBagTest, filled difference part of time complexities table, and commented code regarding difference implementations
 
-Bradley Gunawan:
-CPP email: bdgunawan@cpp.edu
-GitHub Username: Bradgun
-Role and contribution:
+Bradley Gunawan
+CPP email: bdgunawan@cpp.edu 
+GitHub Username: Bradgun 
+Role and contribution: Added intersection method to BagInterface, implemented intersection ResizableArrayBag and ResizableArrayBagTest, implemented intersection to LinkedBag1 and LinkedBagTest, filled intersection part of the time complexities table, pieces clips together for the video, submitted project
 
 Link to video:
