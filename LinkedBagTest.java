@@ -91,7 +91,7 @@ public class LinkedBagTest {
 			   return resultBag;
 		   }
    
-		   //if neither, return the two linked bag with the intersection
+		   //if neither, return the two linked bags with the intersection
 		   Object[] arrayBag = this.toArray();
 		   Object[] arrayBag2 = otherBag.toArray();
    
@@ -99,6 +99,8 @@ public class LinkedBagTest {
 		   for (int i = 0; i < arrayBag.length; i++) {
 			   //placeholder for value in array to compare
 			   Object firstValue = arrayBag[i];
+			   //check if firstValue isn't null
+			if (firstValue != null) {
 			   //loops through second bag
 			   for (int j = 0; j < arrayBag2.length; j++) {
 				   
@@ -115,6 +117,7 @@ public class LinkedBagTest {
 				   }
 			   }
 		   }
+		}
 		   return resultBag;
 	   }
 	   //end of intersection

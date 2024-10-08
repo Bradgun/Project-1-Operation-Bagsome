@@ -102,6 +102,8 @@ public class ResizableArrayBagTest<T> {
 			for (int i = 0; i < arrayBag.length; i++) {
 				//placeholder for value in array to compare
 				Object firstValue = arrayBag[i];
+				//check if firstValue isn't null
+			if (firstValue != null) {
 				//loops through second bag
 				for (int j = 0; j < arrayBag2.length; j++) {
 					
@@ -118,6 +120,7 @@ public class ResizableArrayBagTest<T> {
 					}
 				}
 			}
+		}
 			return resultBag;
 		}
 		//end of intersection
