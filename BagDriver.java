@@ -54,7 +54,7 @@ public class BagDriver {
             System.out.println(arrayBag2.toArray()[i]);
         }
 
-         /* prints out different in ArrayBag */
+         /* prints out different in ArrayBag */ 
         testObj.testDifferenceArray();
 
         /*  
@@ -94,21 +94,16 @@ public class BagDriver {
         /*
          * Intersection of the two arrayBags
          */
-        BagInterface<Object> arrayBagIntersect = arrayBag.intersection(arrayBag2);
-        System.out.println("\nIntersection of arrayBag and arrayBag2:");
-        for (int i = 0; i < arrayBagIntersect.getCurrentSize(); i++) {
-        System.out.println(arrayBagIntersect.toArray()[i]);
-        }
+        BagInterface<Integer> arrayBagIntersect = arrayBag.intersection(arrayBag2);
+        System.out.println("The intersection of the two array bags are:");
+        System.out.println(arrayBagIntersect);
 
         /*
          * Intersection of the two linkedBags
          */
-        BagInterface<Object> linkedBagIntersect = linkBag.intersection(linkBag2);
-        System.out.println("\nIntersection of linkBag and linkBag2:");
-        for (int i = 0; i < linkedBagIntersect.getCurrentSize(); i++) {
-            System.out.println(linkedBagIntersect.toArray()[i]);
-            }
-
+        BagInterface<Integer> linkedBagIntersect = linkBag.intersection(linkBag2);
+        System.out.println("The intersection of the two linked bags are:");
+        System.out.println(linkedBagIntersect);
         }
         private Object[] toArray() {
             // TODO Auto-generated method stub

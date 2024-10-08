@@ -32,6 +32,7 @@ public class LinkedBagTest {
 
    public LinkedBag1<Object> testDifferenceLink() {
     Object[] bagArray = linkBag.toArray();
+	@SuppressWarnings("unused")
 	Object[] bagArray2 = linkBag2.toArray();
 
 		LinkedBag1<Object> returnBag = new LinkedBag1<>();
