@@ -6,19 +6,19 @@ public class BagDriver {
         /*  
          * creates bag objects of resizable array
         */
-        ResizableArrayBag<Integer> arrayBag = new ResizableArrayBag<>();
-        ResizableArrayBag<Integer> arrayBag2 = new ResizableArrayBag<>();
+        ResizableArrayBag<Object> arrayBag = new ResizableArrayBag<>();
+        ResizableArrayBag<Object> arrayBag2 = new ResizableArrayBag<>();
 
         /*  
          * creates bag objects of linked list
         */
-        LinkedBag1<Integer> linkBag = new LinkedBag1<>();
-        LinkedBag1<Integer> linkBag2 = new LinkedBag1<>();
+        LinkedBag1<Object> linkBag = new LinkedBag1<>();
+        LinkedBag1<Object> linkBag2 = new LinkedBag1<>();
 
         /*  
          * creates testing objects for difference of resizable and link list test classes
         */
-        ResizableArrayBagTest<Integer> testObj = new ResizableArrayBagTest<>(arrayBag, arrayBag2);
+        ResizableArrayBagTest<Object> testObj = new ResizableArrayBagTest<>(arrayBag, arrayBag2);
         LinkedBagTest testObj1 = new LinkedBagTest(linkBag, linkBag2);
 	
 
@@ -76,7 +76,7 @@ public class BagDriver {
         /*
          * Union of the two arrayBags
          */
-        BagInterface<Integer> arrayUnionBag = arrayBag.union(arrayBag2);
+        BagInterface<Object> arrayUnionBag = arrayBag.union(arrayBag2);
         System.out.println("\nUnion of arrayBag and arrayBag2:");
         for (int i = 0; i < arrayUnionBag.getCurrentSize(); i++) {
             System.out.println(arrayUnionBag.toArray()[i]);
@@ -86,7 +86,7 @@ public class BagDriver {
         /*
          * Union of the two linkBags
          */
-        BagInterface<Integer> linkUnionBag = linkBag.union(linkBag2);
+        BagInterface<Object> linkUnionBag = linkBag.union(linkBag2);
         System.out.println("\nUnion of linkBag and linkBag2:");
         for (int i = 0; i < linkUnionBag.getCurrentSize(); i++) {
             System.out.println(linkUnionBag.toArray()[i]);
@@ -94,14 +94,14 @@ public class BagDriver {
         /*
          * Intersection of the two arrayBags
          */
-        BagInterface<Integer> arrayBagIntersect = arrayBag.intersection(arrayBag2);
+        BagInterface<Object> arrayBagIntersect = arrayBag.intersection(arrayBag2);
         System.out.println("The intersection of the two array bags are:");
         System.out.println(arrayBagIntersect);
 
         /*
          * Intersection of the two linkedBags
          */
-        BagInterface<Integer> linkedBagIntersect = linkBag.intersection(linkBag2);
+        BagInterface<Object> linkedBagIntersect = linkBag.intersection(linkBag2);
         System.out.println("The intersection of the two linked bags are:");
         System.out.println(linkedBagIntersect);
         }
