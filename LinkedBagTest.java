@@ -112,8 +112,7 @@ public class LinkedBagTest {
 					   
 					   resultBag.add(firstValue);
    
-					   arrayBag[i] = null;
-					   arrayBag2[j] = null;
+
 				   }
 			   }
 		   }

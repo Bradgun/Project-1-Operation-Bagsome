@@ -115,8 +115,7 @@ public class ResizableArrayBagTest<T> {
 						
 						resultBag.add(firstValue);
 	
-						arrayBag[i] = null;
-						arrayBag2[j] = null;
+						
 					}
 				}
 			}

@@ -107,8 +107,7 @@ public final class ResizableArrayBag<T> implements BagInterface<T>
                      
                      resultBag.add(firstValue);
       
-                     arrayBag[i] = null;
-                     arrayBag2[j] = null;
+
                   }
                }
             }
