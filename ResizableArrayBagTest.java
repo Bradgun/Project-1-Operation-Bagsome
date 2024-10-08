@@ -31,6 +31,7 @@ public class ResizableArrayBagTest<T> {
  
 	public ResizableArrayBag<T> testDifferenceArray() {
 		Object[] bagArray = arrayBag.toArray();
+		@SuppressWarnings("unused")
 		Object[] bagArray2 = arrayBag2.toArray();
 
 		ResizableArrayBag<T> returnBag = new ResizableArrayBag<>();
@@ -72,7 +73,7 @@ public class ResizableArrayBagTest<T> {
 		}
 		return unionBag; //end of union
 		}
-	
+
 		public ResizableArrayBag<Object> intersection(ResizableArrayBag<Object> otherBag) {
    
 			//creates a new bag
@@ -135,5 +136,6 @@ public class ResizableArrayBagTest<T> {
 	 }
  
 	}
+	
 
 
