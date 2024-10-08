@@ -76,7 +76,7 @@ public class ResizableArrayBagTest<T> {
 
 		public ResizableArrayBag<Object> intersection(ResizableArrayBag<Object> otherBag) {
    
-			//creates a new bag
+		/*	//creates a new bag
 			ResizableArrayBag<Object> resultBag = new ResizableArrayBag<>();
 	
 			// check to see if either bag is null
@@ -93,11 +93,16 @@ public class ResizableArrayBagTest<T> {
 				//return empty bag if so because there will be no intersection
 				System.out.print("Both bags were empty");
 				return resultBag;
-			}
+			} */
 	
 			//if neither, return the two linked bag with the intersection
+
+
 			Object[] arrayBag = this.toArray();
 			Object[] arrayBag2 = otherBag.toArray();
+
+			ResizableArrayBag<Object> resultBag = new ResizableArrayBag<>();
+
 	
 			//loops through first bag
 			for (int i = 0; i < arrayBag.length; i++) {
@@ -132,12 +137,12 @@ public class ResizableArrayBagTest<T> {
 	 }
  
  
-	 private boolean isEmpty() {
+	// private boolean isEmpty() {
 		 // TODO Auto-generated method stub
-		 throw new UnsupportedOperationException("Unimplemented method 'isEmpty'");
-	 }
+	//	 throw new UnsupportedOperationException("Unimplemented method 'isEmpty'");
+	// }
  
-	}
+	
 	
 
 

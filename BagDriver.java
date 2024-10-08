@@ -106,14 +106,14 @@ public class BagDriver {
         System.out.println(linkedBagIntersect);
         }
         
-        private Object[] toArray() {
+       // private Object[] toArray() {
             // TODO Auto-generated method stub
-            throw new UnsupportedOperationException("Unimplemented method 'toArray'");
-        }
+           // throw new UnsupportedOperationException("Unimplemented method 'toArray'");
+        
     
     
-        private boolean isEmpty() {
+       // private boolean isEmpty() {
             // TODO Auto-generated method stub
-            throw new UnsupportedOperationException("Unimplemented method 'isEmpty'");
-        }
-	}
+           // throw new UnsupportedOperationException("Unimplemented method 'isEmpty'");
+
+    }
