@@ -96,13 +96,18 @@ public class BagDriver {
          */
         BagInterface<Object> arrayBagIntersect = arrayBag.intersection(arrayBag2);
         System.out.println("\nIntersection of arrayBag and arrayBag2:");
-        System.out.println(arrayBagIntersect);
+        for (int i = 0; i < arrayBagIntersect.getCurrentSize(); i++) {
+        System.out.println(arrayBagIntersect.toArray()[i]);
+        }
 
         /*
          * Intersection of the two linkedBags
          */
         BagInterface<Object> linkedBagIntersect = linkBag.intersection(linkBag2);
         System.out.println("\nIntersection of linkBag and linkBag2:");
-        System.out.println(linkedBagIntersect);
+        for (int i = 0; i < linkedBagIntersect.getCurrentSize(); i++) {
+            System.out.println(linkedBagIntersect.toArray()[i]);
+            }
+
         }
 	}
