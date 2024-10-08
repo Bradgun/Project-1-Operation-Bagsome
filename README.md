@@ -10,7 +10,7 @@ Role and contribution: Added union method to BagInterface, implemented union to 
 Carol Balleza
 CPP email: cballeza@cpp.edu
 GitHub Username: cballeza
-Role and contribution: Added difference method to BagInterface, implented 
+Role and contribution: Added difference method to BagInterface, implemented difference to ResizableArrayBag, ResizableArrayBagTest, implemented difference, contains, node, removeEntry in LinkedBag1 and LinkedBagTest, filled difference part of time complexities table, and commented code regarding difference implementations
 
 Bradley Gunawan:
 CPP email: bdgunawan@cpp.edu
