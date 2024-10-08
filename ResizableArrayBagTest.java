@@ -141,7 +141,7 @@ public class ResizableArrayBagTest<T> {
 		 // TODO Auto-generated method stub
 	//	 throw new UnsupportedOperationException("Unimplemented method 'isEmpty'");
 	// }
- 
+	}
 	
 	
 
