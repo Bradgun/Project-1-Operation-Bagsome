@@ -94,15 +94,26 @@ public class BagDriver {
         /*
          * Intersection of the two arrayBags
          */
-        BagInterface<Integer> arrayBagIntersect = arrayBag.intersection(arrayBag2);
+        BagInterface<Object> arrayBagIntersect = arrayBag.intersection(arrayBag2);
         System.out.println("The intersection of the two array bags are:");
         System.out.println(arrayBagIntersect);
 
         /*
          * Intersection of the two linkedBags
          */
-        BagInterface<Integer> linkedBagIntersect = linkBag.intersection(linkBag2);
+        BagInterface<Object> linkedBagIntersect = linkBag.intersection(linkBag2);
         System.out.println("The intersection of the two linked bags are:");
         System.out.println(linkedBagIntersect);
         }
+        
+      /*   private Object[] toArray() {
+            // TODO Auto-generated method stub
+            throw new UnsupportedOperationException("Unimplemented method 'toArray'");
+        }
+    
+    
+        private boolean isEmpty() {
+            // TODO Auto-generated method stub
+            throw new UnsupportedOperationException("Unimplemented method 'isEmpty'");
+        }*/
 	}
