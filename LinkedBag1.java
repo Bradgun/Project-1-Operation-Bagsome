@@ -138,6 +138,8 @@ public final class LinkedBag1<T> implements BagInterface<T>
 				if (firstValue.equals(secondValue)) {
 					
 					resultBag.add(firstValue);
+					arrayBag[i] = null;
+                    arrayBag2[j] = null;
 
 
 				}
